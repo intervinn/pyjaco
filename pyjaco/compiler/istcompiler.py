@@ -67,7 +67,7 @@ class ISTCompiler(Multiplexer):
             if hasattr(self, name):
                 return getattr(self, name)(node)
             else:
-                print [x for x in dir(node) if not x.startswith("_") and not x in ["col_offset", "lineno"]]
+                print([x for x in dir(node) if not x.startswith("_") and not x in ["col_offset", "lineno"]])
                 raise NotImplementedError("%s does not support node type [%s]" % (self.__class__.__name__, node.__class__.__name__))
 
     def node_attribute(self, node):
