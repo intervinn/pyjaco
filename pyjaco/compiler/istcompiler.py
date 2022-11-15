@@ -26,7 +26,7 @@
 ######################################################################
 
 import ast
-from ist import *
+from .ist import *
 
 class Compiler(object):
 
