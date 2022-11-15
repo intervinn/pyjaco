@@ -65,7 +65,7 @@ class Printer(istcompiler.Multiplexer):
             if res:
                 self.line(res)
         self.dedent()
-        if self.buffer and self.buffer[-1].strip() <> "" and end:
+        if self.buffer and self.buffer[-1].strip() == "<>" and end:
             self.line("")
 
     def node_getattr(self, node):
